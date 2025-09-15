@@ -1,0 +1,5 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <h1 class="text-4xl mb-4"><%= @fortune[:icon] %> <%= @fortune[:title] %></h1>
+  <p class="text-xl mb-8"><%= @fortune[:description] %></p>
+  <%= link_to "もう一度占う！", root_path, class: "bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600" %>
+</div>
