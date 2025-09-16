@@ -1,5 +1,32 @@
-<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-  <h1 class="text-4xl mb-4"><%= @fortune[:icon] %> <%= @fortune[:title] %></h1>
-  <p class="text-xl mb-8"><%= @fortune[:description] %></p>
-  <%= link_to "もう一度占う！", root_path, class: "bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600" %>
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-600 via-yellow-400 to-red-800">
+  <div class="bg-black p-10 rounded-2xl shadow-2xl text-center border-4 border-yellow-300">
+    <h1 class="text-6xl mb-6 text-yellow-300 drop-shadow-lg animate-pulse">
+      <%= @fortune[:icon] %> <%= @fortune[:title] %>
+    </h1>
+    <p class="text-2xl mb-8 text-white"><%= @fortune[:description] %></p>
+    <%= link_to "もう一度占う！", root_path,
+          class: "bg-gradient-to-r from-red-500 to-yellow-500 text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transform transition" %>
+  </div>
+</div>
+
+<div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-red-600 via-yellow-400 to-red-800">
+  <div class="bg-black p-10 rounded-2xl shadow-2xl text-center border-4 border-yellow-300">
+    <!-- スロットリール -->
+    <div id="slot-machine" class="flex space-x-4 mb-8">
+      <div class="slot bg-white w-20 h-20 flex items-center justify-center text-4xl rounded">?</div>
+      <div class="slot bg-white w-20 h-20 flex items-center justify-center text-4xl rounded">?</div>
+      <div class="slot bg-white w-20 h-20 flex items-center justify-center text-4xl rounded">?</div>
+    </div>
+
+    <!-- 運勢 -->
+    <h1 id="fortune-title" class="text-5xl mb-4 text-yellow-300 hidden">
+      <%= @fortune[:icon] %> <%= @fortune[:title] %>
+    </h1>
+    <p id="fortune-desc" class="text-xl mb-6 text-white hidden">
+      <%= @fortune[:description] %>
+    </p>
+
+    <%= link_to "もう一度占う！", root_path,
+          class: "bg-gradient-to-r from-red-500 to-yellow-500 text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transform transition" %>
+  </div>
 </div>
