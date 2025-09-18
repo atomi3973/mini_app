@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root "fortunes#show"
+  root "fortunes#index"
+  get "fortune", to: "fortunes#show"
+
   get "posts/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

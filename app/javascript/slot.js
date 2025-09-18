@@ -4,7 +4,7 @@ document.addEventListener("turbo:load", () => {
 
   const slots = slotMachine.querySelectorAll(".slot");
   const resultIcon = slotMachine.dataset.resultIcon; // データ属性から取得
-  const icons = ["🔥", "🎉", "🌊", "❄️", "💀"];
+  const icons = ["🌕", "🔥", "🌰", "🍂", "🎃", "💀"];
 
   let counter = 0;
   const interval = setInterval(() => {
