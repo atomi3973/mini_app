@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "fortunes#index"
-  get "fortune", to: "fortunes#show"
+  root "fortunes#show"      # トップページをスロット画面に
+  resource :fortune, only: [:show]  # 「回す」ボタンも fetch で show を呼ぶ
 
   get "posts/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
